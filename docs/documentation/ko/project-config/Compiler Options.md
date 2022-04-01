@@ -28,7 +28,7 @@ tsc --project tsconfig.json src/*.ts
 ## 컴파일러 옵션 (Compiler Options)
 
 **tsconfig의 컴파일러 옵션에 대한 더 많은 정보를 찾는다면, 베타 TSConfig 레퍼런스를
-[v2 사이트](/ko/tsconfig.html)에서 확인하세요.**
+[v2 사이트](/ko/tsconfig)에서 확인하세요.**
 
 <h3>CLI 명령어 (CLI Commands)</h3>
 
@@ -109,7 +109,7 @@ tsc --project tsconfig.json src/*.ts
 </td>
 </tr>
 <tr class="option-description even"><td colspan="3">
-<p>빌드를 진행하는 대신 설정이 최종적으로 어떻게 구성되었는지 출력해줍니다.</p>
+<p>빌드를 진행하는 대신 설정이 최종적으로 어떻게 구성되었는지 출력합니다.</p>
 </td></tr>
 
 <tr class='odd' name='version'>
@@ -138,7 +138,7 @@ tsc --project tsconfig.json src/*.ts
 </td>
 </tr>
 <tr class="option-description odd"><td colspan="3">
-<p>단일 또는 여러 프로젝트와 그 모든 의존성을 빌드합니다.</p>
+<p>단일 또는 여러 프로젝트와 그와 관련된 모든 의존성을 빌드합니다.</p>
 </td></tr>
 
 <tr class='even' name='clean'>
@@ -147,7 +147,9 @@ tsc --project tsconfig.json src/*.ts
 </td>
 </tr>
 <tr class="option-description even"><td colspan="3">
-<p>Delete the outputs of all projects.</p>
+<p>
+  모든 프로젝트의 빌드 출력물을 제거합니다.
+</p>
 </td></tr>
 
 <tr class='odd' name='dry'>
@@ -156,25 +158,99 @@ tsc --project tsconfig.json src/*.ts
 </td>
 </tr>
 <tr class="option-description odd"><td colspan="3">
-<p>Show what would be built (or deleted, if specified with '--clean')</p>
+<p>무엇이 빌드되었는지 보여줍니다. (--clean을 함께 사용한 경우, 무엇이 삭제되었는지 보여줍니다.)</p>
 </td></tr>
 
 <tr class='even' name='force'>
-  <td><code><a href='/tsconfig/#force'>--force</a></code></td>
+  <td><code><a href='/ko/tsconfig/#force'>--force</a></code></td>
   <td><p><code>boolean</code></p>
 </td>
 </tr>
 <tr class="option-description even"><td colspan="3">
-<p>Build all projects, including those that appear to be up to date.</p>
+<p>최신으로 빌드된 것으로 보이는 프로젝트를 포함한 모든 프로젝트를 빌드합니다.</p>
 </td></tr>
 
 <tr class='odd' name='verbose'>
-  <td><code><a href='/tsconfig/#verbose'>--verbose</a></code></td>
+  <td><code><a href='/ko/tsconfig/#verbose'>--verbose</a></code></td>
   <td><p><code>boolean</code></p>
 </td>
 </tr>
 <tr class="option-description odd"><td colspan="3">
-<p>Enable verbose logging.</p>
+<p>상세한 로그를 보여줍니다</p>
+</td></tr>
+
+</tbody></table>
+
+<h3>Watch Options</h3>
+<table class="cli-option" width="100%">
+  <thead>
+    <tr>
+      <th>Flag</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr class='odd' name='excludeDirectories'>
+  <td><code><a href='/ko/tsconfig/#excludeDirectories'>--excludeDirectories</a></code></td>
+  <td><p><code>list</code></p>
+</td>
+</tr>
+<tr class="option-description odd"><td colspan="3">
+<p>디렉토리들을 감시 대상에서 제거합니다.</p>
+</td></tr>
+
+<tr class='even' name='excludeFiles'>
+  <td><code><a href='/ko/tsconfig/#excludeFiles'>--excludeFiles</a></code></td>
+  <td><p><code>list</code></p>
+</td>
+</tr>
+<tr class="option-description even"><td colspan="3">
+<p>파일들을 감시 대상에서 제거합니다.</p>
+</td></tr>
+
+<tr class='odd' name='fallbackPolling'>
+  <td><code><a href='/ko/tsconfig#fallbackPolling'>--fallbackPolling</a></code></td>
+  <td><p><code>fixedinterval</code>, <code>priorityinterval</code>, <code>dynamicpriority</code>, or <code>fixedchunksize</code></p>
+</td>
+</tr>
+<tr class="option-description odd"><td colspan="3">
+<p>시스템이 네이티브 파일 왓쳐가 부족한 경우 왓쳐의 접근 전략을 지정해줍니다.</p>
+</td></tr>
+
+<tr class='even' name='synchronousWatchDirectory'>
+  <td><code><a href='/ko/tsconfig/#synchronousWatchDirectory'>--synchronousWatchDirectory</a></code></td>
+  <td><p><code>boolean</code></p>
+</td>
+</tr>
+<tr class="option-description even"><td colspan="3">
+<p>Synchronously call callbacks and update the state of directory watchers on platforms that don`t support recursive watching natively.</p>
+</td></tr>
+
+<tr class='odd' name='watch'>
+  <td><code>--watch</code></td>
+  <td><p><code>boolean</code></p>
+</td>
+</tr>
+<tr class="option-description odd"><td colspan="3">
+<p>Watch input files.</p>
+</td></tr>
+
+<tr class='even' name='watchDirectory'>
+  <td><code><a href='/ko/tsconfig/#watchDirectory'>--watchDirectory</a></code></td>
+  <td><p><code>usefsevents</code>, <code>fixedpollinginterval</code>, <code>dynamicprioritypolling</code>, or <code>fixedchunksizepolling</code></p>
+</td>
+</tr>
+<tr class="option-description even"><td colspan="3">
+<p>Specify how directories are watched on systems that lack recursive file-watching functionality.</p>
+</td></tr>
+
+<tr class='odd' name='watchFile'>
+  <td><code><a href='/ko/tsconfig/#watchFile'>--watchFile</a></code></td>
+  <td><p><code>fixedpollinginterval</code>, <code>prioritypollinginterval</code>, <code>dynamicprioritypolling</code>, <code>fixedchunksizepolling</code>, <code>usefsevents</code>, or <code>usefseventsonparentdirectory</code></p>
+</td>
+</tr>
+<tr class="option-description odd"><td colspan="3">
+<p>Specify how the TypeScript watch mode works.</p>
 </td></tr>
 
 </tbody></table>
