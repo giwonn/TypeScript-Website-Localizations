@@ -27,8 +27,160 @@ tsc --project tsconfig.json src/*.ts
 
 ## 컴파일러 옵션 (Compiler Options)
 
-tsconfig의 컴파일러 옵션에 대한 더 많은 정보를 찾는다면, 베타 TSConfig 레퍼런스를
-[v2 사이트](https://www.typescriptlang.org/v2/en/tsconfig)에서 확인하세요.
+**tsconfig의 컴파일러 옵션에 대한 더 많은 정보를 찾는다면, 베타 TSConfig 레퍼런스를
+[v2 사이트](/ko/tsconfig.html)에서 확인하세요.**
+
+<h3>CLI 명령어 (CLI Commands)</h3>
+
+<table class="cli-option" width="100%">
+  <thead>
+    <tr>
+      <th>Flag</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr class='odd' name='all'>
+  <td><code>--all</code></td>
+  <td><p><code>boolean</code></p>
+</td>
+</tr>
+<tr class="option-description odd"><td colspan="3">
+<p>모든 컴파일러 옵션을 보여줍니다.</p>
+</td></tr>
+
+<tr class='even' name='generateTrace'>
+  <td><code>--generateTrace</code></td>
+  <td><p><code>string</code></p>
+</td>
+</tr>
+<tr class="option-description even"><td colspan="3">
+<p>타입들의 리스트와 발생한 이벤트 기록을 생성합니다.</p>
+</td></tr>
+
+<tr class='odd' name='help'>
+  <td><code>--help</code></td>
+  <td><p><code>boolean</code></p>
+</td>
+</tr>
+<tr class="option-description odd"><td colspan="3">
+<p>CLI 도움말에 대한 정보를 제공합니다.</p>
+</td></tr>
+
+<tr class='even' name='init'>
+  <td><code>--init</code></td>
+  <td><p><code>boolean</code></p>
+</td>
+</tr>
+<tr class="option-description even"><td colspan="3">
+<p>TypeScript 프로젝트를 초기화하고 tsconfig.json 파일을 생성합니다.</p>
+</td></tr>
+
+<tr class='odd' name='listFilesOnly'>
+  <td><code>--listFilesOnly</code></td>
+  <td><p><code>boolean</code></p>
+</td>
+</tr>
+<tr class="option-description odd"><td colspan="3">
+<p>컴파일에 포함된 파일의 이름을 출력하고 작업을 중단합니다.</p>
+</td></tr>
+
+<tr class='even' name='locale'>
+  <td><code>--locale</code></td>
+  <td><p><code>string</code></p>
+</td>
+</tr>
+<tr class="option-description even"><td colspan="3">
+<p>Typescript 메시지를 표시하는 데 사용할 지역화를 설정합니다. 트랜스파일에 영향을 미치지 않습니다.</p>
+</td></tr>
+
+<tr class='odd' name='project'>
+  <td><code>--project</code></td>
+  <td><p><code>string</code></p>
+</td>
+</tr>
+<tr class="option-description odd"><td colspan="3">
+<p>설정 파일에 지정된 경로 혹은 'tsconfig.json'에 지정된 디렉토리의 프로젝트를 컴파일 합니다.</p>
+</td></tr>
+
+<tr class='even' name='showConfig'>
+  <td><code>--showConfig</code></td>
+  <td><p><code>boolean</code></p>
+</td>
+</tr>
+<tr class="option-description even"><td colspan="3">
+<p>빌드를 진행하는 대신 설정이 최종적으로 어떻게 구성되었는지 출력해줍니다.</p>
+</td></tr>
+
+<tr class='odd' name='version'>
+  <td><code>--version</code></td>
+  <td><p><code>boolean</code></p>
+</td>
+</tr>
+<tr class="option-description odd"><td colspan="3">
+<p>컴파일러의 버전을 출력합니다.</p>
+</td></tr>
+
+</tbody></table>
+
+<h3>Build Options</h3>
+<table class="cli-option" width="100%">
+  <thead>
+    <tr>
+      <th>Flag</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr class='odd' name='build'>
+  <td><code>--build</code></td>
+  <td><p><code>boolean</code></p>
+</td>
+</tr>
+<tr class="option-description odd"><td colspan="3">
+<p>단일 또는 여러 프로젝트와 그 모든 의존성을 빌드합니다.</p>
+</td></tr>
+
+<tr class='even' name='clean'>
+  <td><code>--clean</code></td>
+  <td><p><code>boolean</code></p>
+</td>
+</tr>
+<tr class="option-description even"><td colspan="3">
+<p>Delete the outputs of all projects.</p>
+</td></tr>
+
+<tr class='odd' name='dry'>
+  <td><code>--dry</code></td>
+  <td><p><code>boolean</code></p>
+</td>
+</tr>
+<tr class="option-description odd"><td colspan="3">
+<p>Show what would be built (or deleted, if specified with '--clean')</p>
+</td></tr>
+
+<tr class='even' name='force'>
+  <td><code><a href='/tsconfig/#force'>--force</a></code></td>
+  <td><p><code>boolean</code></p>
+</td>
+</tr>
+<tr class="option-description even"><td colspan="3">
+<p>Build all projects, including those that appear to be up to date.</p>
+</td></tr>
+
+<tr class='odd' name='verbose'>
+  <td><code><a href='/tsconfig/#verbose'>--verbose</a></code></td>
+  <td><p><code>boolean</code></p>
+</td>
+</tr>
+<tr class="option-description odd"><td colspan="3">
+<p>Enable verbose logging.</p>
+</td></tr>
+
+</tbody></table>
+
+### CLI Commands
+
 
 옵션                                           | 타입      | 기본값                         | 설명
 -----------------------------------------------|-----------|--------------------------------|----------------------------------------------------------------------
